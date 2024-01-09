@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $family;
+    background-color: $main-color;
+}
+.screen {
+    height: calc(100vh - 20px);
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        @media (max-width: 375px) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        padding: 10px;
+        border: 1px solid $title-c;
+        border-radius: 10px;
+        background-color: $white;
+        header {
+            @media (max-width: 375px)
+            {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            margin-bottom: 10px;
+            img {
+                border-radius: 10px;
+            }
+        }
+        section {
+            h2 {
+                font-weight: 600;
+                color: $dark-text;
+                text-transform: capitalize;
+                font-size: $p-size;
+                width: fit-content;
+                padding: 3px 5px;
+                background-color: $main-color;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: $p-size;
+                color: $title-c;
+                font-weight: 600;
+                max-width: 336px;
+                &:first-of-type {
+                    color: $dark-grey;
+                }
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 20px;
+                color: $dark-text;
+                margin: 10px 0;
+                font-weight: 800;
+                transition: .3s;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+            .profile {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                h3 {
+                    font-weight: 800;
+                    font-size: $p-size;
+                    color: $dark-text;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+/* footer */
+footer {
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
